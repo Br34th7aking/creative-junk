@@ -66,11 +66,12 @@ def play_game():
         elif found_object == "monster":
             if "a sword" in player.inventory:
                 print("You kill the monster with your sword")
-                player.fight()
+                player.attack()
                 current_stage += 1
                 score += 100
             elif "a shield" in player.inventory: 
                 print("You close the door quickly")
+                player.defend()
                 score += 25
             else: 
                 print("You die! Time to be reborn.")
