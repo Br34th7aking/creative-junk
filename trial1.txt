@@ -1,0 +1,24 @@
+#### The Three Door Dungeon ####
+
+Welcome to the Three Door Dungeon!
+
+The player is trapped inside a dungeon and at every stage he faces three doors. He has to pick a door that he wants to open. If he 
+picks the wrong door, he may get eaten by a vicious monster. If he picks the right door, he gets a treasure chest which may contain a 
+golden key among other rewards. 
+
+The golden key is a special item that allows the player to skip stages. There will be no golden key in the last stage. 
+Currently there are three stages. The game will also track how many tries it took the player to win the game. 
+
+Alright, let's get coding!
+
+
+# Results
+----------
+
+I got stuck at a number of places because I hadn't planned how the stages will be like beforehand. 
+
+As I was coding, I made quite a few typos.I am making them right now as well. But the more important thing was that 
+as I wrote more code, the game's idea started to evolve. I started to want different things for the different items. I should break down the checklist even further, in my next attempt. 
+
+Okay, this is it for this one!
+  
