@@ -58,7 +58,7 @@ def play_game():
                 current_stage += 1
                 score += 50
             else:
-                print("Wow, that's {found_object}! It will be useful.")
+                print(f"Wow, that's {found_object}! It will be useful.")
                 player.add_equipment(found_object)
                 current_stage += 1
                 score += 50
