@@ -1,0 +1,85 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+
+.container {
+        background: linear-gradient(rgba(0, 0,0, 0.7), rgba(0, 0, 0, 0.8)), url(images/background.jpg) no-repeat center;
+        height: 100vh;
+        width: 100%;
+}
+
+.welcome-screen {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+}
+
+.game-title {
+
+        font-family: 'Shojumaru', cursive;
+        font-size: 4rem;
+        font-weight: bold;
+        color: #ffe400;
+}
+
+.player-name {
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        color: #86c232;
+        background: #222c29;
+        margin-top: 20px;
+        border: none;
+        border-bottom: 2px solid #86c232;
+        text-transform: uppercase;
+        outline: none;
+        border-radius: 20px;
+}
+
+.start-button {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #006b38;
+        background: #222c29;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 10px;
+        box-shadow: 2px 2px 2px #ffe400;
+        transition: background .5s;
+        border-radius: 20px;
+}
+
+.start-button:hover {
+        background: #86c232;
+}
+
+.game-screen {
+        display: none;
+        height: 100vh;
+        width: 100%;
+}
+
+.door-area {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.door { 
+        margin-top: 10%;
+        font-size: 20rem;
+        color: #f7882f;
+        cursor: pointer;
+        transition: box-shadow .5s;
+        cursor: pointer;
+}
+.door:hover {
+        box-shadow: 3px 3px 3px #f7c331;
+}
+
