@@ -3,6 +3,7 @@
 ### June 2, 2019
 
 import random 
+from termcolor import *
 
 chest_rewards = ['a sword',
                 'a shield',
@@ -31,7 +32,8 @@ class Player:
 
 def play_game():
     prompt = '> ' 
-    name = input('Hello adventurer! Have a name?' + prompt)
+    welcome = colored('Hello adventurer! Have a name?' + prompt, 'green')
+    name = input(welcome)
     
     player = Player(name)
     game_over = False
@@ -40,41 +42,41 @@ def play_game():
     score = 0
     possible_things = ['monster', 'monster', random.choice(chest_rewards)]
     while not game_over:
-
-        door_choice = input(f'Stage #{current_stage}: {player.name}, You see three doors. Which door do you open?{prompt}')
+        
+        door_choice = input(f'{colored("Stage", "cyan")} #{current_stage}: {player.name}, You see {colored("three", "red")} doors. Which door do you open?{prompt}')
         while int(door_choice) > 3:
             door_choice = input(f'{player.name}, Open a door by providing a number from 1 to 3. {prompt}')
             
         found_object = random.choice(possible_things)
-        print(found_object)  
         # if found object is a monster, you kill, you run or you die. 
         # if found object is a treasure, add it to the player's inventory.
         if found_object in chest_rewards:
             if found_object == "a golden key":
                 current_stage += 5
                 score += 500
+                print(colored("You found a golden key. Advance 5 stages!!!", "yellow"))
             elif found_object == "nothing":
-                print("You find nothing in this treasure chest")
+                print(f"You find {colored('nothing', 'magenta')} in this treasure chest")
                 current_stage += 1
                 score += 50
             else:
-                print(f"Wow, that's {found_object}! It will be useful.")
+                print(f"Wow, that's {colored(found_object, 'cyan')}! It will be useful.")
                 player.add_equipment(found_object)
                 current_stage += 1
                 score += 50
 
         elif found_object == "monster":
             if "a sword" in player.inventory:
-                print("You kill the monster with your sword")
+                print(colored("You kill the monster with your sword", "magenta"))
                 player.attack()
                 current_stage += 1
                 score += 100
             elif "a shield" in player.inventory: 
-                print("You close the door quickly")
+                print(colored("You close the door quickly", "blue"))
                 player.defend()
                 score += 25
             else: 
-                print("You die! Time to be reborn.")
+                print(colored("You die! Time to be reborn.", "red"))
                 deaths += 1
                 score -= 25
                 
