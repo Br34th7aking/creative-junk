@@ -61,7 +61,7 @@
 }
 
 .game-screen {
-        display: none; 
+        display: none;
         height: 100vh;
         width: 100%;
 }
@@ -71,7 +71,7 @@
     justify-content: space-evenly;
 }
 
-.door { 
+.door {
         margin-top: 10%;
         font-size: 10rem;
         color: #f7882f;
@@ -102,4 +102,27 @@
         font-size: 20px;
         color: white;
         margin-top: 20px;
+}
+
+@media(max-width: 600px) {
+  .door-area {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .door {
+          margin-top: 10%;
+          font-size: 5rem;
+          color: #f7882f;
+          cursor: pointer;
+          transition: box-shadow .5s;
+          cursor: pointer;
+  }
+  .message-screen {
+          margin-top: 50px;
+          width: 90%;
+          font-size: 30px;
+
+  }
 }
