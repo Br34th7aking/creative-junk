@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <title>Three Cave Dungeon</title>
-                <meta charset="utf-8">
-                <link href="https://fonts.googleapis.com/css?family=Shojumaru|Source+Code+Pro&display=swap" rel="stylesheet">
-                <link rel="stylesheet" href="style.css">
-                <script src="https://kit.fontawesome.com/1fe7a21075.js"></script>
-        </head>
 
-        <body>
-                <div class="container">
-                        <div class="welcome-screen">
-                                <h1 class="game-title">3 Door Dungeon</h1>
-                                <form action = "">
-                                        <input type="text" class="player-name" placeholder="Enter Name">
-                                        <button class="start-button" type="button">Start Game</button>
-                                </form>
-                        </div>
+<head>
+  <title>Three Cave Dungeon</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Shojumaru|Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1fe7a21075.js"></script>
+</head>
 
-                        <div class="game-screen">
-                                <div class="door-area">
-                                        <div class="door" id="the first door"><i class="fas fa-dungeon"></i></div>
-                                        <div class="door" id="the second door"><i class="fas fa-dungeon"></i></div>
-                                        <div class="door" id="the third door"><i class="fas fa-dungeon"></i></div>
-                                </div>
-                                <div class="message-screen">
-                                </div>
-                                <div class="progress">
-                                </div>
-                                <div class="inventory">
-                                </div>
-                        </div>
-                </div>
+<body>
+  <div class="container">
+    <div class="welcome-screen">
+      <h1 class="game-title">3 Door Dungeon</h1>
+      <form action="">
+        <input type="text" class="player-name" placeholder="Enter Name">
+        <button class="start-button" type="button">Start Game</button>
+      </form>
+    </div>
 
-                <script src="game.js"></script>
-        </body>
+    <div class="game-screen">
+      <div class="door-area">
+        <div class="door" id="the first door"><i class="fas fa-dungeon"></i></div>
+        <div class="door" id="the second door"><i class="fas fa-dungeon"></i></div>
+        <div class="door" id="the third door"><i class="fas fa-dungeon"></i></div>
+      </div>
+      <div class="message-screen">
+      </div>
+      <div class="progress">
+      </div>
+      <div class="inventory">
+      </div>
+    </div>
+  </div>
+  <!-- The music for this game is from: Darren Curtis => https://www.patreon.com/darrencurtismusic -->
+  <audio loop class="game-audio">
+    <source src="audio/game_audio.ogg" type="audio/ogg">
+      <source src="audio/game_audio.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="game.js"></script>
+</body>
 
 </html>
-

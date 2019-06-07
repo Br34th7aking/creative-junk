@@ -19,11 +19,12 @@ let num_swords = 0;
 let num_shields = 0;
 let won = false;
 
+
 startButton.addEventListener('click', () => {
     if (playerNameInput.value != "") {
             playerName = playerNameInput.value;
     }
-
+    document.querySelector(".game-audio").play();
     welcomeScreen.style.display = "none";
     gameScreen.style.display = "block";
     messageScreen.innerHTML = playerName + ', you see three doors. Which one will you open?(Click your choice)';
